@@ -4,7 +4,7 @@ Lastname:Zhang
 Firstname:Héloïse
 
 ## 2.2
-command:
+command:docker run app .
 
 ## 2.3
 question:
