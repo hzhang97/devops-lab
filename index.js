@@ -1,8 +1,3 @@
-/*
-cd /Users/zhang/Documents/ECE/Web-technology/web-service/
-node index-zoo.js
-*/
-
 const express = require('express');
 const app = express();
 const mysql = require('mysql');
