@@ -3,12 +3,12 @@
 Lastname:Zhang
 Firstname:Héloïse
 
-## 2.2 - sur mac
-command: docker run app
+## 2.2 - 
+command:docker run app
 
 ## 2.3
-question:
-command:
+question:there is no port assign to the container
+command:docker run -p 3000:3000 app
 
 ## 2.5
 question:
