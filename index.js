@@ -750,9 +750,9 @@ app.delete('/staff',function (req,res) {
 
 
 app.listen(3000, function() {
-    db.connect(function(err){
-        if (err) throw err;
-        console.log('Connection to database succefull');
-    })
+    // db.connect(function(err){
+    //     if (err) throw err;
+    //     console.log('Connection to database succefull');
+    // })
     console.log('Example app listening on port 3000!');
 });
