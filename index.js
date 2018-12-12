@@ -1,16 +1,22 @@
 const express = require('express');
 const app = express();
 const mysql = require('mysql');
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 
 // app.use(bodyParser.urlencoded({ extended: true}));
 
 var db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "root",
-    database: "zoo",
-    port:"8889"
+    host: process.env.MYSQL_HOST,
+    user: process.env.MYSQL_USER,
+    password: process.env.MYSQL_PASSWORD,
+    database: process.env.MYSQL_DATABASE,
+    port:process.env.MYSQL_PORT,
+    // host: "localhost",
+    // user: "root",
+    // password: "root",
+    // database: "zoo",
+    // port:"8889",
+    // socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock'
 });
 
 // ------------ Firewall --------------------------------------------------
@@ -744,9 +750,9 @@ app.delete('/staff',function (req,res) {
 
 
 app.listen(3000, function() {
-    // db.connect(function(err){
-    //     if (err) throw err;
-    //     console.log('Connection to database succefull');
-    // })
+    db.connect(function(err){
+        if (err) throw err;
+        console.log('Connection to database succefull');
+    })
     console.log('Example app listening on port 3000!');
 });
