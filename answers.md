@@ -34,8 +34,8 @@ question:
 output:
 
 ## 3.1
-command:
+command:docker-compose run web
 
 ## 3.4
-command:
-command:
+command:docker-compose run -d web
+command:docker-compose top
